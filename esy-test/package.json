@@ -1,0 +1,8 @@
+{
+  "esy": {
+    "build": "m4 --help"
+  },
+  "dependencies": {
+    "esy-m4": "*"
+  }
+}
