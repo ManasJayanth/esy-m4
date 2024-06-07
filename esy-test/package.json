@@ -1,6 +1,6 @@
 {
   "esy": {
-    "build": "m4 --help"
+    "build": "ls -R #{self.install}"
   },
   "dependencies": {
     "esy-m4": "*"
