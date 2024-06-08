@@ -4,6 +4,9 @@
   "description": "esy-m4 packaged for esy",
   "source": "https://ftp.gnu.org/gnu/m4/m4-1.4.19.tar.xz#sha256:63aede5c6d33b6d9b13511cd0be2cac046f2e70fd0a07aa9573a04a82783af96",
   "override": {
+    "buildEnv": {
+      "PATH": "#{ os == 'windows' ? '/usr/x86_64-w64-mingw32/sys-root/mingw/bin' : '' } #{ : $PATH}"
+    },
     "build": [
       "find ./ -exec touch -t 200905010101 {} +",
       "./configure #{os == 'darwin' ? '--disable-dependency-tracking': '' } #{os == 'windows' ? '--host x86_64-W64-mingw32': ''} --prefix=#{self.install}",
